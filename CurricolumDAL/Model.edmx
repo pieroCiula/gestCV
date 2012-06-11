@@ -1,0 +1,1773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GestioneCVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GestioneCVModelStoreContainer">
+          <EntitySet Name="Ambiente_Ide" EntityType="GestioneCVModel.Store.Ambiente_Ide" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="App_Server" EntityType="GestioneCVModel.Store.App_Server" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Certificazione" EntityType="GestioneCVModel.Store.Certificazione" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv" EntityType="GestioneCVModel.Store.Cv" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Ambiente_Ide" EntityType="GestioneCVModel.Store.Cv_Ambiente_Ide" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_App_Server" EntityType="GestioneCVModel.Store.Cv_App_Server" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_certificazione" EntityType="GestioneCVModel.Store.Cv_certificazione" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Db" EntityType="GestioneCVModel.Store.Cv_Db" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Esperienza" EntityType="GestioneCVModel.Store.Cv_Esperienza" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Framework" EntityType="GestioneCVModel.Store.Cv_Framework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Linguaggio" EntityType="GestioneCVModel.Store.Cv_Linguaggio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cv_Versioning_Configuration" EntityType="GestioneCVModel.Store.Cv_Versioning_Configuration" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Db" EntityType="GestioneCVModel.Store.Db" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Dipendente" EntityType="GestioneCVModel.Store.Dipendente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza" EntityType="GestioneCVModel.Store.Esperienza" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_Ambiente_Ide" EntityType="GestioneCVModel.Store.Esperienza_Ambiente_Ide" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_App_Server" EntityType="GestioneCVModel.Store.Esperienza_App_Server" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_Db" EntityType="GestioneCVModel.Store.Esperienza_Db" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_Framework" EntityType="GestioneCVModel.Store.Esperienza_Framework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_Linguaggio" EntityType="GestioneCVModel.Store.Esperienza_Linguaggio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Esperienza_Versioning_Configuration" EntityType="GestioneCVModel.Store.Esperienza_Versioning_Configuration" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Framework" EntityType="GestioneCVModel.Store.Framework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lingua" EntityType="GestioneCVModel.Store.Lingua" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Linguaggio" EntityType="GestioneCVModel.Store.Linguaggio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ruolo" EntityType="GestioneCVModel.Store.Ruolo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_lingua" EntityType="GestioneCVModel.Store.Tipo_lingua" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="GestioneCVModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Valutazione" EntityType="GestioneCVModel.Store.Valutazione" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Versioning_Configuration" EntityType="GestioneCVModel.Store.Versioning_Configuration" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Cv_Ambiente_Ide_Ambiente_Ide" Association="GestioneCVModel.Store.FK_Cv_Ambiente_Ide_Ambiente_Ide">
+            <End Role="Ambiente_Ide" EntitySet="Ambiente_Ide" />
+            <End Role="Cv_Ambiente_Ide" EntitySet="Cv_Ambiente_Ide" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Ambiente_Ide_Cv" Association="GestioneCVModel.Store.FK_Cv_Ambiente_Ide_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Ambiente_Ide" EntitySet="Cv_Ambiente_Ide" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_App_Server_App_Server" Association="GestioneCVModel.Store.FK_Cv_App_Server_App_Server">
+            <End Role="App_Server" EntitySet="App_Server" />
+            <End Role="Cv_App_Server" EntitySet="Cv_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_App_Server_Cv" Association="GestioneCVModel.Store.FK_Cv_App_Server_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_App_Server" EntitySet="Cv_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_certificazione_Certificazione" Association="GestioneCVModel.Store.FK_Cv_certificazione_Certificazione">
+            <End Role="Certificazione" EntitySet="Certificazione" />
+            <End Role="Cv_certificazione" EntitySet="Cv_certificazione" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_certificazione_Cv_certificazione" Association="GestioneCVModel.Store.FK_Cv_certificazione_Cv_certificazione">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_certificazione" EntitySet="Cv_certificazione" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Db_Cv" Association="GestioneCVModel.Store.FK_Cv_Db_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Db" EntitySet="Cv_Db" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Db_Db" Association="GestioneCVModel.Store.FK_Cv_Db_Db">
+            <End Role="Db" EntitySet="Db" />
+            <End Role="Cv_Db" EntitySet="Cv_Db" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Dipendente" Association="GestioneCVModel.Store.FK_Cv_Dipendente">
+            <End Role="Dipendente" EntitySet="Dipendente" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Esperienza_Cv" Association="GestioneCVModel.Store.FK_Cv_Esperienza_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Esperienza" EntitySet="Cv_Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Esperienza_Cv_Esperienza" Association="GestioneCVModel.Store.FK_Cv_Esperienza_Cv_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Cv_Esperienza" EntitySet="Cv_Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Framework_Cv" Association="GestioneCVModel.Store.FK_Cv_Framework_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Framework" EntitySet="Cv_Framework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Framework_Framework" Association="GestioneCVModel.Store.FK_Cv_Framework_Framework">
+            <End Role="Framework" EntitySet="Framework" />
+            <End Role="Cv_Framework" EntitySet="Cv_Framework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Linguaggio_Cv_Linguaggio" Association="GestioneCVModel.Store.FK_Cv_Linguaggio_Cv_Linguaggio">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Linguaggio" EntitySet="Cv_Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Linguaggio_Linguaggio" Association="GestioneCVModel.Store.FK_Cv_Linguaggio_Linguaggio">
+            <End Role="Linguaggio" EntitySet="Linguaggio" />
+            <End Role="Cv_Linguaggio" EntitySet="Cv_Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Versioning_Configuration_Cv" Association="GestioneCVModel.Store.FK_Cv_Versioning_Configuration_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Versioning_Configuration" EntitySet="Cv_Versioning_Configuration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Versioning_Configuration_Versioning_Configuration" Association="GestioneCVModel.Store.FK_Cv_Versioning_Configuration_Versioning_Configuration">
+            <End Role="Versioning_Configuration" EntitySet="Versioning_Configuration" />
+            <End Role="Cv_Versioning_Configuration" EntitySet="Cv_Versioning_Configuration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Ambiente_Ide_Ambiente_Ide" Association="GestioneCVModel.Store.FK_Esperienza_Ambiente_Ide_Ambiente_Ide">
+            <End Role="Ambiente_Ide" EntitySet="Ambiente_Ide" />
+            <End Role="Esperienza_Ambiente_Ide" EntitySet="Esperienza_Ambiente_Ide" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Ambiente_Ide_Esperienza" Association="GestioneCVModel.Store.FK_Esperienza_Ambiente_Ide_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_Ambiente_Ide" EntitySet="Esperienza_Ambiente_Ide" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_App_Server_App_Server" Association="GestioneCVModel.Store.FK_Esperienza_App_Server_App_Server">
+            <End Role="App_Server" EntitySet="App_Server" />
+            <End Role="Esperienza_App_Server" EntitySet="Esperienza_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_App_Server_Esperienza" Association="GestioneCVModel.Store.FK_Esperienza_App_Server_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_App_Server" EntitySet="Esperienza_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Db_Db" Association="GestioneCVModel.Store.FK_Esperienza_Db_Db">
+            <End Role="Db" EntitySet="Db" />
+            <End Role="Esperienza_Db" EntitySet="Esperienza_Db" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Db_Esperienza" Association="GestioneCVModel.Store.FK_Esperienza_Db_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_Db" EntitySet="Esperienza_Db" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Framework_Esperienza_Framework" Association="GestioneCVModel.Store.FK_Esperienza_Framework_Esperienza_Framework">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_Framework" EntitySet="Esperienza_Framework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Framework_Framework" Association="GestioneCVModel.Store.FK_Esperienza_Framework_Framework">
+            <End Role="Framework" EntitySet="Framework" />
+            <End Role="Esperienza_Framework" EntitySet="Esperienza_Framework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Linguaggio_Esperienza_Linguaggio" Association="GestioneCVModel.Store.FK_Esperienza_Linguaggio_Esperienza_Linguaggio">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_Linguaggio" EntitySet="Esperienza_Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Linguaggio_Linguaggio" Association="GestioneCVModel.Store.FK_Esperienza_Linguaggio_Linguaggio">
+            <End Role="Linguaggio" EntitySet="Linguaggio" />
+            <End Role="Esperienza_Linguaggio" EntitySet="Esperienza_Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Versioning_Configuration_Esperienza_Versioning_Configuration" Association="GestioneCVModel.Store.FK_Esperienza_Versioning_Configuration_Esperienza_Versioning_Configuration">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_Versioning_Configuration" EntitySet="Esperienza_Versioning_Configuration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_Versioning_Configuration_Versioning_Configuration" Association="GestioneCVModel.Store.FK_Esperienza_Versioning_Configuration_Versioning_Configuration">
+            <End Role="Versioning_Configuration" EntitySet="Versioning_Configuration" />
+            <End Role="Esperienza_Versioning_Configuration" EntitySet="Esperienza_Versioning_Configuration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_Cv" Association="GestioneCVModel.Store.FK_Lingua_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_lettura" Association="GestioneCVModel.Store.FK_Lingua_lettura">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_parlato" Association="GestioneCVModel.Store.FK_Lingua_parlato">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_scrittura" Association="GestioneCVModel.Store.FK_Lingua_scrittura">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_Tipo_lingua" Association="GestioneCVModel.Store.FK_Lingua_Tipo_lingua">
+            <End Role="Tipo_lingua" EntitySet="Tipo_lingua" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Ruolo" Association="GestioneCVModel.Store.FK_User_Ruolo">
+            <End Role="Ruolo" EntitySet="Ruolo" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ambiente_Ide">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="App_Server">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Certificazione">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
+          <Property Name="ente_rilascio" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Cv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fk_dipendente" Type="int" Nullable="false" />
+          <Property Name="IsCompleto" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_Ambiente_Ide">
+          <Key>
+            <PropertyRef Name="fk_Ambiente_Ide" />
+            <PropertyRef Name="fk_Cv" />
+          </Key>
+          <Property Name="fk_Ambiente_Ide" Type="int" Nullable="false" />
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_App_Server">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_App_Server" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_App_Server" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_certificazione">
+          <Key>
+            <PropertyRef Name="fk_Certificazione" />
+            <PropertyRef Name="fk_Cv" />
+          </Key>
+          <Property Name="fk_Certificazione" Type="int" Nullable="false" />
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="data_conseguimento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cv_Db">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Db" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_Db" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_Esperienza">
+          <Key>
+            <PropertyRef Name="fk_esperienza" />
+            <PropertyRef Name="fk_Cv" />
+          </Key>
+          <Property Name="fk_esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="data_inizio" Type="datetime" Nullable="false" />
+          <Property Name="data_fine" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_Framework">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Framework" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_Framework" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_Linguaggio">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Linguaggio" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_Linguaggio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cv_Versioning_Configuration">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Versioning_Configuration" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_Versioning_Configuration" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Db">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Dipendente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="cognome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="data_nascita" Type="datetime" Nullable="false" />
+          <Property Name="istruzione" Type="varchar" MaxLength="50" />
+          <Property Name="nome_istituto" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Esperienza">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome_datore" Type="varchar" MaxLength="50" />
+          <Property Name="indirizzo_datore" Type="varchar" MaxLength="50" />
+          <Property Name="nome_progetto" Type="varchar" MaxLength="50" />
+          <Property Name="mansione" Type="varchar" MaxLength="50" />
+          <Property Name="tipo_linguaggio" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Esperienza_Ambiente_Ide">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_Ambiente_Ide" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Ambiente_Ide" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Esperienza_App_Server">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_App_Server" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_App_Server" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Esperienza_Db">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_Db" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Db" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Esperienza_Framework">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_Framework" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Framework" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Esperienza_Linguaggio">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_Linguaggio" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Linguaggio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Esperienza_Versioning_Configuration">
+          <Key>
+            <PropertyRef Name="fk_esperienza" />
+            <PropertyRef Name="fk_Versioning_Configuration" />
+          </Key>
+          <Property Name="fk_esperienza" Type="int" Nullable="false" />
+          <Property Name="fk_Versioning_Configuration" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Framework">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lingua">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Tipo_lingua" />
+          </Key>
+          <Property Name="fk_Cv" Type="int" Nullable="false" />
+          <Property Name="fk_Tipo_lingua" Type="int" Nullable="false" />
+          <Property Name="lettura" Type="int" Nullable="false" />
+          <Property Name="scrittura" Type="int" Nullable="false" />
+          <Property Name="parlato" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Linguaggio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Ruolo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tipo_ruolo" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tipo_lingua">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="fk_ruolo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Valutazione">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome_valutazione" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Versioning_Configuration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Cv_Ambiente_Ide_Ambiente_Ide">
+          <End Role="Ambiente_Ide" Type="GestioneCVModel.Store.Ambiente_Ide" Multiplicity="1" />
+          <End Role="Cv_Ambiente_Ide" Type="GestioneCVModel.Store.Cv_Ambiente_Ide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ambiente_Ide">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Ambiente_Ide">
+              <PropertyRef Name="fk_Ambiente_Ide" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Ambiente_Ide_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Ambiente_Ide" Type="GestioneCVModel.Store.Cv_Ambiente_Ide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Ambiente_Ide">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_App_Server_App_Server">
+          <End Role="App_Server" Type="GestioneCVModel.Store.App_Server" Multiplicity="1" />
+          <End Role="Cv_App_Server" Type="GestioneCVModel.Store.Cv_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="App_Server">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_App_Server">
+              <PropertyRef Name="fk_App_Server" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_App_Server_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_App_Server" Type="GestioneCVModel.Store.Cv_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_App_Server">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_certificazione_Certificazione">
+          <End Role="Certificazione" Type="GestioneCVModel.Store.Certificazione" Multiplicity="1" />
+          <End Role="Cv_certificazione" Type="GestioneCVModel.Store.Cv_certificazione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Certificazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_certificazione">
+              <PropertyRef Name="fk_Certificazione" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_certificazione_Cv_certificazione">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_certificazione" Type="GestioneCVModel.Store.Cv_certificazione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_certificazione">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Db_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Db" Type="GestioneCVModel.Store.Cv_Db" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Db">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Db_Db">
+          <End Role="Db" Type="GestioneCVModel.Store.Db" Multiplicity="1" />
+          <End Role="Cv_Db" Type="GestioneCVModel.Store.Cv_Db" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Db">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Db">
+              <PropertyRef Name="fk_Db" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Dipendente">
+          <End Role="Dipendente" Type="GestioneCVModel.Store.Dipendente" Multiplicity="1" />
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dipendente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="fk_dipendente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Esperienza_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Esperienza" Type="GestioneCVModel.Store.Cv_Esperienza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Esperienza">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Esperienza_Cv_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Cv_Esperienza" Type="GestioneCVModel.Store.Cv_Esperienza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Esperienza">
+              <PropertyRef Name="fk_esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Framework_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Framework" Type="GestioneCVModel.Store.Cv_Framework" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Framework">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Framework_Framework">
+          <End Role="Framework" Type="GestioneCVModel.Store.Framework" Multiplicity="1" />
+          <End Role="Cv_Framework" Type="GestioneCVModel.Store.Cv_Framework" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Framework">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Framework">
+              <PropertyRef Name="fk_Framework" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Linguaggio_Cv_Linguaggio">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Linguaggio" Type="GestioneCVModel.Store.Cv_Linguaggio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Linguaggio">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Linguaggio_Linguaggio">
+          <End Role="Linguaggio" Type="GestioneCVModel.Store.Linguaggio" Multiplicity="1" />
+          <End Role="Cv_Linguaggio" Type="GestioneCVModel.Store.Cv_Linguaggio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linguaggio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Linguaggio">
+              <PropertyRef Name="fk_Linguaggio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Versioning_Configuration_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Cv_Versioning_Configuration" Type="GestioneCVModel.Store.Cv_Versioning_Configuration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Versioning_Configuration">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Versioning_Configuration_Versioning_Configuration">
+          <End Role="Versioning_Configuration" Type="GestioneCVModel.Store.Versioning_Configuration" Multiplicity="1" />
+          <End Role="Cv_Versioning_Configuration" Type="GestioneCVModel.Store.Cv_Versioning_Configuration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Versioning_Configuration">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Versioning_Configuration">
+              <PropertyRef Name="fk_Versioning_Configuration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Ambiente_Ide_Ambiente_Ide">
+          <End Role="Ambiente_Ide" Type="GestioneCVModel.Store.Ambiente_Ide" Multiplicity="1" />
+          <End Role="Esperienza_Ambiente_Ide" Type="GestioneCVModel.Store.Esperienza_Ambiente_Ide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ambiente_Ide">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Ambiente_Ide">
+              <PropertyRef Name="fk_Ambiente_Ide" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Ambiente_Ide_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_Ambiente_Ide" Type="GestioneCVModel.Store.Esperienza_Ambiente_Ide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Ambiente_Ide">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_App_Server_App_Server">
+          <End Role="App_Server" Type="GestioneCVModel.Store.App_Server" Multiplicity="1" />
+          <End Role="Esperienza_App_Server" Type="GestioneCVModel.Store.Esperienza_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="App_Server">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_App_Server">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_App_Server_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_App_Server" Type="GestioneCVModel.Store.Esperienza_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_App_Server">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Db_Db">
+          <End Role="Db" Type="GestioneCVModel.Store.Db" Multiplicity="1" />
+          <End Role="Esperienza_Db" Type="GestioneCVModel.Store.Esperienza_Db" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Db">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Db">
+              <PropertyRef Name="fk_Db" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Db_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_Db" Type="GestioneCVModel.Store.Esperienza_Db" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Db">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Framework_Esperienza_Framework">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_Framework" Type="GestioneCVModel.Store.Esperienza_Framework" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Framework">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Framework_Framework">
+          <End Role="Framework" Type="GestioneCVModel.Store.Framework" Multiplicity="1" />
+          <End Role="Esperienza_Framework" Type="GestioneCVModel.Store.Esperienza_Framework" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Framework">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Framework">
+              <PropertyRef Name="fk_Framework" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Linguaggio_Esperienza_Linguaggio">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_Linguaggio" Type="GestioneCVModel.Store.Esperienza_Linguaggio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Linguaggio">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Linguaggio_Linguaggio">
+          <End Role="Linguaggio" Type="GestioneCVModel.Store.Linguaggio" Multiplicity="1" />
+          <End Role="Esperienza_Linguaggio" Type="GestioneCVModel.Store.Esperienza_Linguaggio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linguaggio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Linguaggio">
+              <PropertyRef Name="fk_Linguaggio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Versioning_Configuration_Esperienza_Versioning_Configuration">
+          <End Role="Esperienza" Type="GestioneCVModel.Store.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_Versioning_Configuration" Type="GestioneCVModel.Store.Esperienza_Versioning_Configuration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Versioning_Configuration">
+              <PropertyRef Name="fk_esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_Versioning_Configuration_Versioning_Configuration">
+          <End Role="Versioning_Configuration" Type="GestioneCVModel.Store.Versioning_Configuration" Multiplicity="1" />
+          <End Role="Esperienza_Versioning_Configuration" Type="GestioneCVModel.Store.Esperienza_Versioning_Configuration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Versioning_Configuration">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_Versioning_Configuration">
+              <PropertyRef Name="fk_Versioning_Configuration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Store.Cv" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Store.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_lettura">
+          <End Role="Valutazione" Type="GestioneCVModel.Store.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Store.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="lettura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_parlato">
+          <End Role="Valutazione" Type="GestioneCVModel.Store.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Store.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="parlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_scrittura">
+          <End Role="Valutazione" Type="GestioneCVModel.Store.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Store.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="scrittura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_Tipo_lingua">
+          <End Role="Tipo_lingua" Type="GestioneCVModel.Store.Tipo_lingua" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Store.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_lingua">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="fk_Tipo_lingua" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Ruolo">
+          <End Role="Ruolo" Type="GestioneCVModel.Store.Ruolo" Multiplicity="1" />
+          <End Role="User" Type="GestioneCVModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ruolo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="fk_ruolo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GestioneCVModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GestioneCVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ambiente_Ide" EntityType="GestioneCVModel.Ambiente_Ide" />
+          <EntitySet Name="App_Server" EntityType="GestioneCVModel.App_Server" />
+          <EntitySet Name="Certificazione" EntityType="GestioneCVModel.Certificazione" />
+          <EntitySet Name="Cv" EntityType="GestioneCVModel.Cv" />
+          <EntitySet Name="Cv_certificazione" EntityType="GestioneCVModel.Cv_certificazione" />
+          <EntitySet Name="Cv_Esperienza" EntityType="GestioneCVModel.Cv_Esperienza" />
+          <EntitySet Name="Db" EntityType="GestioneCVModel.Db" />
+          <EntitySet Name="Dipendente" EntityType="GestioneCVModel.Dipendente" />
+          <EntitySet Name="Esperienza" EntityType="GestioneCVModel.Esperienza" />
+          <EntitySet Name="Esperienza_App_Server" EntityType="GestioneCVModel.Esperienza_App_Server" />
+          <EntitySet Name="Framework" EntityType="GestioneCVModel.Framework" />
+          <EntitySet Name="Lingua" EntityType="GestioneCVModel.Lingua" />
+          <EntitySet Name="Linguaggio" EntityType="GestioneCVModel.Linguaggio" />
+          <EntitySet Name="Ruolo" EntityType="GestioneCVModel.Ruolo" />
+          <EntitySet Name="Tipo_lingua" EntityType="GestioneCVModel.Tipo_lingua" />
+          <EntitySet Name="User" EntityType="GestioneCVModel.User" />
+          <EntitySet Name="Valutazione" EntityType="GestioneCVModel.Valutazione" />
+          <EntitySet Name="Versioning_Configuration" EntityType="GestioneCVModel.Versioning_Configuration" />
+          <AssociationSet Name="FK_Esperienza_App_Server_App_Server" Association="GestioneCVModel.FK_Esperienza_App_Server_App_Server">
+            <End Role="App_Server" EntitySet="App_Server" />
+            <End Role="Esperienza_App_Server" EntitySet="Esperienza_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_certificazione_Certificazione" Association="GestioneCVModel.FK_Cv_certificazione_Certificazione">
+            <End Role="Certificazione" EntitySet="Certificazione" />
+            <End Role="Cv_certificazione" EntitySet="Cv_certificazione" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_certificazione_Cv_certificazione" Association="GestioneCVModel.FK_Cv_certificazione_Cv_certificazione">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_certificazione" EntitySet="Cv_certificazione" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Dipendente" Association="GestioneCVModel.FK_Cv_Dipendente">
+            <End Role="Dipendente" EntitySet="Dipendente" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Esperienza_Cv" Association="GestioneCVModel.FK_Cv_Esperienza_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Cv_Esperienza" EntitySet="Cv_Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_Cv" Association="GestioneCVModel.FK_Lingua_Cv">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cv_Esperienza_Cv_Esperienza" Association="GestioneCVModel.FK_Cv_Esperienza_Cv_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Cv_Esperienza" EntitySet="Cv_Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Esperienza_App_Server_Esperienza" Association="GestioneCVModel.FK_Esperienza_App_Server_Esperienza">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Esperienza_App_Server" EntitySet="Esperienza_App_Server" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_lettura" Association="GestioneCVModel.FK_Lingua_lettura">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_parlato" Association="GestioneCVModel.FK_Lingua_parlato">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_scrittura" Association="GestioneCVModel.FK_Lingua_scrittura">
+            <End Role="Valutazione" EntitySet="Valutazione" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lingua_Tipo_lingua" Association="GestioneCVModel.FK_Lingua_Tipo_lingua">
+            <End Role="Tipo_lingua" EntitySet="Tipo_lingua" />
+            <End Role="Lingua" EntitySet="Lingua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Ruolo" Association="GestioneCVModel.FK_User_Ruolo">
+            <End Role="Ruolo" EntitySet="Ruolo" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_Ambiente_Ide" Association="GestioneCVModel.Cv_Ambiente_Ide">
+            <End Role="Ambiente_Ide" EntitySet="Ambiente_Ide" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_App_Server" Association="GestioneCVModel.Cv_App_Server">
+            <End Role="App_Server" EntitySet="App_Server" />
+            <End Role="Cv" EntitySet="Cv" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_Db" Association="GestioneCVModel.Cv_Db">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Db" EntitySet="Db" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_Framework" Association="GestioneCVModel.Cv_Framework">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Framework" EntitySet="Framework" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_Linguaggio" Association="GestioneCVModel.Cv_Linguaggio">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Linguaggio" EntitySet="Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="Cv_Versioning_Configuration" Association="GestioneCVModel.Cv_Versioning_Configuration">
+            <End Role="Cv" EntitySet="Cv" />
+            <End Role="Versioning_Configuration" EntitySet="Versioning_Configuration" />
+          </AssociationSet>
+          <AssociationSet Name="Esperienza_Ambiente_Ide" Association="GestioneCVModel.Esperienza_Ambiente_Ide">
+            <End Role="Ambiente_Ide" EntitySet="Ambiente_Ide" />
+            <End Role="Esperienza" EntitySet="Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="Esperienza_Db" Association="GestioneCVModel.Esperienza_Db">
+            <End Role="Db" EntitySet="Db" />
+            <End Role="Esperienza" EntitySet="Esperienza" />
+          </AssociationSet>
+          <AssociationSet Name="Esperienza_Framework" Association="GestioneCVModel.Esperienza_Framework">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Framework" EntitySet="Framework" />
+          </AssociationSet>
+          <AssociationSet Name="Esperienza_Linguaggio" Association="GestioneCVModel.Esperienza_Linguaggio">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Linguaggio" EntitySet="Linguaggio" />
+          </AssociationSet>
+          <AssociationSet Name="Esperienza_Versioning_Configuration" Association="GestioneCVModel.Esperienza_Versioning_Configuration">
+            <End Role="Esperienza" EntitySet="Esperienza" />
+            <End Role="Versioning_Configuration" EntitySet="Versioning_Configuration" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ambiente_Ide">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_Ambiente_Ide" FromRole="Ambiente_Ide" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.Esperienza_Ambiente_Ide" FromRole="Ambiente_Ide" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="App_Server">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Esperienza_App_Server" Relationship="GestioneCVModel.FK_Esperienza_App_Server_App_Server" FromRole="App_Server" ToRole="Esperienza_App_Server" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_App_Server" FromRole="App_Server" ToRole="Cv" />
+        </EntityType>
+        <EntityType Name="Certificazione">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ente_rilascio" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv_certificazione" Relationship="GestioneCVModel.FK_Cv_certificazione_Certificazione" FromRole="Certificazione" ToRole="Cv_certificazione" />
+        </EntityType>
+        <EntityType Name="Cv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fk_dipendente" Type="Int32" Nullable="false" />
+          <Property Name="IsCompleto" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Cv_certificazione" Relationship="GestioneCVModel.FK_Cv_certificazione_Cv_certificazione" FromRole="Cv" ToRole="Cv_certificazione" />
+          <NavigationProperty Name="Dipendente" Relationship="GestioneCVModel.FK_Cv_Dipendente" FromRole="Cv" ToRole="Dipendente" />
+          <NavigationProperty Name="Cv_Esperienza" Relationship="GestioneCVModel.FK_Cv_Esperienza_Cv" FromRole="Cv" ToRole="Cv_Esperienza" />
+          <NavigationProperty Name="Lingua" Relationship="GestioneCVModel.FK_Lingua_Cv" FromRole="Cv" ToRole="Lingua" />
+          <NavigationProperty Name="Ambiente_Ide" Relationship="GestioneCVModel.Cv_Ambiente_Ide" FromRole="Cv" ToRole="Ambiente_Ide" />
+          <NavigationProperty Name="App_Server" Relationship="GestioneCVModel.Cv_App_Server" FromRole="Cv" ToRole="App_Server" />
+          <NavigationProperty Name="Db" Relationship="GestioneCVModel.Cv_Db" FromRole="Cv" ToRole="Db" />
+          <NavigationProperty Name="Framework" Relationship="GestioneCVModel.Cv_Framework" FromRole="Cv" ToRole="Framework" />
+          <NavigationProperty Name="Linguaggio" Relationship="GestioneCVModel.Cv_Linguaggio" FromRole="Cv" ToRole="Linguaggio" />
+          <NavigationProperty Name="Versioning_Configuration" Relationship="GestioneCVModel.Cv_Versioning_Configuration" FromRole="Cv" ToRole="Versioning_Configuration" />
+        </EntityType>
+        <EntityType Name="Cv_certificazione">
+          <Key>
+            <PropertyRef Name="fk_Certificazione" />
+            <PropertyRef Name="fk_Cv" />
+          </Key>
+          <Property Name="fk_Certificazione" Type="Int32" Nullable="false" />
+          <Property Name="fk_Cv" Type="Int32" Nullable="false" />
+          <Property Name="data_conseguimento" Type="DateTime" />
+          <NavigationProperty Name="Certificazione" Relationship="GestioneCVModel.FK_Cv_certificazione_Certificazione" FromRole="Cv_certificazione" ToRole="Certificazione" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.FK_Cv_certificazione_Cv_certificazione" FromRole="Cv_certificazione" ToRole="Cv" />
+        </EntityType>
+        <EntityType Name="Cv_Esperienza">
+          <Key>
+            <PropertyRef Name="fk_esperienza" />
+            <PropertyRef Name="fk_Cv" />
+          </Key>
+          <Property Name="fk_esperienza" Type="Int32" Nullable="false" />
+          <Property Name="fk_Cv" Type="Int32" Nullable="false" />
+          <Property Name="data_inizio" Type="DateTime" Nullable="false" />
+          <Property Name="data_fine" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.FK_Cv_Esperienza_Cv" FromRole="Cv_Esperienza" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.FK_Cv_Esperienza_Cv_Esperienza" FromRole="Cv_Esperienza" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="Db">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_Db" FromRole="Db" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.Esperienza_Db" FromRole="Db" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="Dipendente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="cognome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="data_nascita" Type="DateTime" Nullable="false" />
+          <Property Name="istruzione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nome_istituto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.FK_Cv_Dipendente" FromRole="Dipendente" ToRole="Cv" />
+        </EntityType>
+        <EntityType Name="Esperienza">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_datore" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="indirizzo_datore" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nome_progetto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mansione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_linguaggio" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv_Esperienza" Relationship="GestioneCVModel.FK_Cv_Esperienza_Cv_Esperienza" FromRole="Esperienza" ToRole="Cv_Esperienza" />
+          <NavigationProperty Name="Esperienza_App_Server" Relationship="GestioneCVModel.FK_Esperienza_App_Server_Esperienza" FromRole="Esperienza" ToRole="Esperienza_App_Server" />
+          <NavigationProperty Name="Ambiente_Ide" Relationship="GestioneCVModel.Esperienza_Ambiente_Ide" FromRole="Esperienza" ToRole="Ambiente_Ide" />
+          <NavigationProperty Name="Db" Relationship="GestioneCVModel.Esperienza_Db" FromRole="Esperienza" ToRole="Db" />
+          <NavigationProperty Name="Framework" Relationship="GestioneCVModel.Esperienza_Framework" FromRole="Esperienza" ToRole="Framework" />
+          <NavigationProperty Name="Linguaggio" Relationship="GestioneCVModel.Esperienza_Linguaggio" FromRole="Esperienza" ToRole="Linguaggio" />
+          <NavigationProperty Name="Versioning_Configuration" Relationship="GestioneCVModel.Esperienza_Versioning_Configuration" FromRole="Esperienza" ToRole="Versioning_Configuration" />
+        </EntityType>
+        <EntityType Name="Esperienza_App_Server">
+          <Key>
+            <PropertyRef Name="fk_Esperienza" />
+            <PropertyRef Name="fk_App_Server" />
+          </Key>
+          <Property Name="fk_Esperienza" Type="Int32" Nullable="false" />
+          <Property Name="fk_App_Server" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="App_Server" Relationship="GestioneCVModel.FK_Esperienza_App_Server_App_Server" FromRole="Esperienza_App_Server" ToRole="App_Server" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.FK_Esperienza_App_Server_Esperienza" FromRole="Esperienza_App_Server" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="Framework">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_Framework" FromRole="Framework" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.Esperienza_Framework" FromRole="Framework" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="Lingua">
+          <Key>
+            <PropertyRef Name="fk_Cv" />
+            <PropertyRef Name="fk_Tipo_lingua" />
+          </Key>
+          <Property Name="fk_Cv" Type="Int32" Nullable="false" />
+          <Property Name="fk_Tipo_lingua" Type="Int32" Nullable="false" />
+          <Property Name="lettura" Type="Int32" Nullable="false" />
+          <Property Name="scrittura" Type="Int32" Nullable="false" />
+          <Property Name="parlato" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.FK_Lingua_Cv" FromRole="Lingua" ToRole="Cv" />
+          <NavigationProperty Name="Lingua_scrittura" Relationship="GestioneCVModel.FK_Lingua_lettura" FromRole="Lingua" ToRole="Valutazione" />
+          <NavigationProperty Name="Lingua_parlato" Relationship="GestioneCVModel.FK_Lingua_parlato" FromRole="Lingua" ToRole="Valutazione" />
+          <NavigationProperty Name="Lingua_lettura" Relationship="GestioneCVModel.FK_Lingua_scrittura" FromRole="Lingua" ToRole="Valutazione" />
+          <NavigationProperty Name="Tipo_lingua" Relationship="GestioneCVModel.FK_Lingua_Tipo_lingua" FromRole="Lingua" ToRole="Tipo_lingua" />
+        </EntityType>
+        <EntityType Name="Linguaggio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_Linguaggio" FromRole="Linguaggio" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.Esperienza_Linguaggio" FromRole="Linguaggio" ToRole="Esperienza" />
+        </EntityType>
+        <EntityType Name="Ruolo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tipo_ruolo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GestioneCVModel.FK_User_Ruolo" FromRole="Ruolo" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Tipo_lingua">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Lingua" Relationship="GestioneCVModel.FK_Lingua_Tipo_lingua" FromRole="Tipo_lingua" ToRole="Lingua" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="fk_ruolo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ruolo" Relationship="GestioneCVModel.FK_User_Ruolo" FromRole="User" ToRole="Ruolo" />
+        </EntityType>
+        <EntityType Name="Valutazione">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_valutazione" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Scrittura_list" Relationship="GestioneCVModel.FK_Lingua_lettura" FromRole="Valutazione" ToRole="Lingua" />
+          <NavigationProperty Name="Parlato_list" Relationship="GestioneCVModel.FK_Lingua_parlato" FromRole="Valutazione" ToRole="Lingua" />
+          <NavigationProperty Name="Lettura_list" Relationship="GestioneCVModel.FK_Lingua_scrittura" FromRole="Valutazione" ToRole="Lingua" />
+        </EntityType>
+        <EntityType Name="Versioning_Configuration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cv" Relationship="GestioneCVModel.Cv_Versioning_Configuration" FromRole="Versioning_Configuration" ToRole="Cv" />
+          <NavigationProperty Name="Esperienza" Relationship="GestioneCVModel.Esperienza_Versioning_Configuration" FromRole="Versioning_Configuration" ToRole="Esperienza" />
+        </EntityType>
+        <Association Name="FK_Esperienza_App_Server_App_Server">
+          <End Role="App_Server" Type="GestioneCVModel.App_Server" Multiplicity="1" />
+          <End Role="Esperienza_App_Server" Type="GestioneCVModel.Esperienza_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="App_Server">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_App_Server">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_certificazione_Certificazione">
+          <End Role="Certificazione" Type="GestioneCVModel.Certificazione" Multiplicity="1" />
+          <End Role="Cv_certificazione" Type="GestioneCVModel.Cv_certificazione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Certificazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_certificazione">
+              <PropertyRef Name="fk_Certificazione" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_certificazione_Cv_certificazione">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="1" />
+          <End Role="Cv_certificazione" Type="GestioneCVModel.Cv_certificazione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_certificazione">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Dipendente">
+          <End Role="Dipendente" Type="GestioneCVModel.Dipendente" Multiplicity="1" />
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dipendente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv">
+              <PropertyRef Name="fk_dipendente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Esperienza_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="1" />
+          <End Role="Cv_Esperienza" Type="GestioneCVModel.Cv_Esperienza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Esperienza">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_Cv">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cv">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="fk_Cv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cv_Esperienza_Cv_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="1" />
+          <End Role="Cv_Esperienza" Type="GestioneCVModel.Cv_Esperienza" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cv_Esperienza">
+              <PropertyRef Name="fk_esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Esperienza_App_Server_Esperienza">
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="1" />
+          <End Role="Esperienza_App_Server" Type="GestioneCVModel.Esperienza_App_Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Esperienza">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Esperienza_App_Server">
+              <PropertyRef Name="fk_Esperienza" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_lettura">
+          <End Role="Valutazione" Type="GestioneCVModel.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="lettura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_parlato">
+          <End Role="Valutazione" Type="GestioneCVModel.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="parlato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_scrittura">
+          <End Role="Valutazione" Type="GestioneCVModel.Valutazione" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Valutazione">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="scrittura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lingua_Tipo_lingua">
+          <End Role="Tipo_lingua" Type="GestioneCVModel.Tipo_lingua" Multiplicity="1" />
+          <End Role="Lingua" Type="GestioneCVModel.Lingua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_lingua">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Lingua">
+              <PropertyRef Name="fk_Tipo_lingua" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Ruolo">
+          <End Role="Ruolo" Type="GestioneCVModel.Ruolo" Multiplicity="1" />
+          <End Role="User" Type="GestioneCVModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ruolo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="fk_ruolo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cv_Ambiente_Ide">
+          <End Role="Ambiente_Ide" Type="GestioneCVModel.Ambiente_Ide" Multiplicity="*" />
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+        </Association>
+        <Association Name="Cv_App_Server">
+          <End Role="App_Server" Type="GestioneCVModel.App_Server" Multiplicity="*" />
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+        </Association>
+        <Association Name="Cv_Db">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+          <End Role="Db" Type="GestioneCVModel.Db" Multiplicity="*" />
+        </Association>
+        <Association Name="Cv_Framework">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+          <End Role="Framework" Type="GestioneCVModel.Framework" Multiplicity="*" />
+        </Association>
+        <Association Name="Cv_Linguaggio">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+          <End Role="Linguaggio" Type="GestioneCVModel.Linguaggio" Multiplicity="*" />
+        </Association>
+        <Association Name="Cv_Versioning_Configuration">
+          <End Role="Cv" Type="GestioneCVModel.Cv" Multiplicity="*" />
+          <End Role="Versioning_Configuration" Type="GestioneCVModel.Versioning_Configuration" Multiplicity="*" />
+        </Association>
+        <Association Name="Esperienza_Ambiente_Ide">
+          <End Role="Ambiente_Ide" Type="GestioneCVModel.Ambiente_Ide" Multiplicity="*" />
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="*" />
+        </Association>
+        <Association Name="Esperienza_Db">
+          <End Role="Db" Type="GestioneCVModel.Db" Multiplicity="*" />
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="*" />
+        </Association>
+        <Association Name="Esperienza_Framework">
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="*" />
+          <End Role="Framework" Type="GestioneCVModel.Framework" Multiplicity="*" />
+        </Association>
+        <Association Name="Esperienza_Linguaggio">
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="*" />
+          <End Role="Linguaggio" Type="GestioneCVModel.Linguaggio" Multiplicity="*" />
+        </Association>
+        <Association Name="Esperienza_Versioning_Configuration">
+          <End Role="Esperienza" Type="GestioneCVModel.Esperienza" Multiplicity="*" />
+          <End Role="Versioning_Configuration" Type="GestioneCVModel.Versioning_Configuration" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GestioneCVModelStoreContainer" CdmEntityContainer="GestioneCVEntities">
+          <EntitySetMapping Name="Ambiente_Ide"><EntityTypeMapping TypeName="GestioneCVModel.Ambiente_Ide"><MappingFragment StoreEntitySet="Ambiente_Ide">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="App_Server"><EntityTypeMapping TypeName="GestioneCVModel.App_Server"><MappingFragment StoreEntitySet="App_Server">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Certificazione"><EntityTypeMapping TypeName="GestioneCVModel.Certificazione"><MappingFragment StoreEntitySet="Certificazione">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="ente_rilascio" ColumnName="ente_rilascio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Cv"><EntityTypeMapping TypeName="GestioneCVModel.Cv"><MappingFragment StoreEntitySet="Cv">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="fk_dipendente" ColumnName="fk_dipendente" />
+            <ScalarProperty Name="IsCompleto" ColumnName="IsCompleto" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Cv_certificazione"><EntityTypeMapping TypeName="GestioneCVModel.Cv_certificazione"><MappingFragment StoreEntitySet="Cv_certificazione">
+            <ScalarProperty Name="fk_Certificazione" ColumnName="fk_Certificazione" />
+            <ScalarProperty Name="fk_Cv" ColumnName="fk_Cv" />
+            <ScalarProperty Name="data_conseguimento" ColumnName="data_conseguimento" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Cv_Esperienza"><EntityTypeMapping TypeName="GestioneCVModel.Cv_Esperienza"><MappingFragment StoreEntitySet="Cv_Esperienza">
+            <ScalarProperty Name="fk_esperienza" ColumnName="fk_esperienza" />
+            <ScalarProperty Name="fk_Cv" ColumnName="fk_Cv" />
+            <ScalarProperty Name="data_inizio" ColumnName="data_inizio" />
+            <ScalarProperty Name="data_fine" ColumnName="data_fine" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Db"><EntityTypeMapping TypeName="GestioneCVModel.Db"><MappingFragment StoreEntitySet="Db">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Dipendente"><EntityTypeMapping TypeName="GestioneCVModel.Dipendente"><MappingFragment StoreEntitySet="Dipendente">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="cognome" ColumnName="cognome" />
+            <ScalarProperty Name="data_nascita" ColumnName="data_nascita" />
+            <ScalarProperty Name="istruzione" ColumnName="istruzione" />
+            <ScalarProperty Name="nome_istituto" ColumnName="nome_istituto" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Esperienza"><EntityTypeMapping TypeName="GestioneCVModel.Esperienza"><MappingFragment StoreEntitySet="Esperienza">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome_datore" ColumnName="nome_datore" />
+            <ScalarProperty Name="indirizzo_datore" ColumnName="indirizzo_datore" />
+            <ScalarProperty Name="nome_progetto" ColumnName="nome_progetto" />
+            <ScalarProperty Name="mansione" ColumnName="mansione" />
+            <ScalarProperty Name="tipo_linguaggio" ColumnName="tipo_linguaggio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Esperienza_App_Server"><EntityTypeMapping TypeName="GestioneCVModel.Esperienza_App_Server"><MappingFragment StoreEntitySet="Esperienza_App_Server">
+            <ScalarProperty Name="fk_Esperienza" ColumnName="fk_Esperienza" />
+            <ScalarProperty Name="fk_App_Server" ColumnName="fk_App_Server" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Framework"><EntityTypeMapping TypeName="GestioneCVModel.Framework"><MappingFragment StoreEntitySet="Framework">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Lingua"><EntityTypeMapping TypeName="GestioneCVModel.Lingua"><MappingFragment StoreEntitySet="Lingua">
+            <ScalarProperty Name="fk_Cv" ColumnName="fk_Cv" />
+            <ScalarProperty Name="fk_Tipo_lingua" ColumnName="fk_Tipo_lingua" />
+            <ScalarProperty Name="lettura" ColumnName="lettura" />
+            <ScalarProperty Name="scrittura" ColumnName="scrittura" />
+            <ScalarProperty Name="parlato" ColumnName="parlato" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Linguaggio"><EntityTypeMapping TypeName="GestioneCVModel.Linguaggio"><MappingFragment StoreEntitySet="Linguaggio">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Ruolo"><EntityTypeMapping TypeName="GestioneCVModel.Ruolo"><MappingFragment StoreEntitySet="Ruolo">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="tipo_ruolo" ColumnName="tipo_ruolo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tipo_lingua"><EntityTypeMapping TypeName="GestioneCVModel.Tipo_lingua"><MappingFragment StoreEntitySet="Tipo_lingua">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="User"><EntityTypeMapping TypeName="GestioneCVModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="username" ColumnName="username" />
+            <ScalarProperty Name="password" ColumnName="password" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="fk_ruolo" ColumnName="fk_ruolo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Valutazione"><EntityTypeMapping TypeName="GestioneCVModel.Valutazione"><MappingFragment StoreEntitySet="Valutazione">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome_valutazione" ColumnName="nome_valutazione" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Versioning_Configuration"><EntityTypeMapping TypeName="GestioneCVModel.Versioning_Configuration"><MappingFragment StoreEntitySet="Versioning_Configuration">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="Cv_Ambiente_Ide" TypeName="GestioneCVModel.Cv_Ambiente_Ide" StoreEntitySet="Cv_Ambiente_Ide">
+            <EndProperty Name="Ambiente_Ide">
+              <ScalarProperty Name="id" ColumnName="fk_Ambiente_Ide" />
+            </EndProperty>
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Cv_App_Server" TypeName="GestioneCVModel.Cv_App_Server" StoreEntitySet="Cv_App_Server">
+            <EndProperty Name="App_Server">
+              <ScalarProperty Name="id" ColumnName="fk_App_Server" />
+            </EndProperty>
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Cv_Db" TypeName="GestioneCVModel.Cv_Db" StoreEntitySet="Cv_Db">
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+            <EndProperty Name="Db">
+              <ScalarProperty Name="id" ColumnName="fk_Db" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Cv_Framework" TypeName="GestioneCVModel.Cv_Framework" StoreEntitySet="Cv_Framework">
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+            <EndProperty Name="Framework">
+              <ScalarProperty Name="id" ColumnName="fk_Framework" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Cv_Linguaggio" TypeName="GestioneCVModel.Cv_Linguaggio" StoreEntitySet="Cv_Linguaggio">
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+            <EndProperty Name="Linguaggio">
+              <ScalarProperty Name="id" ColumnName="fk_Linguaggio" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Cv_Versioning_Configuration" TypeName="GestioneCVModel.Cv_Versioning_Configuration" StoreEntitySet="Cv_Versioning_Configuration">
+            <EndProperty Name="Cv">
+              <ScalarProperty Name="id" ColumnName="fk_Cv" />
+            </EndProperty>
+            <EndProperty Name="Versioning_Configuration">
+              <ScalarProperty Name="id" ColumnName="fk_Versioning_Configuration" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Esperienza_Ambiente_Ide" TypeName="GestioneCVModel.Esperienza_Ambiente_Ide" StoreEntitySet="Esperienza_Ambiente_Ide">
+            <EndProperty Name="Ambiente_Ide">
+              <ScalarProperty Name="id" ColumnName="fk_Ambiente_Ide" />
+            </EndProperty>
+            <EndProperty Name="Esperienza">
+              <ScalarProperty Name="id" ColumnName="fk_Esperienza" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Esperienza_Db" TypeName="GestioneCVModel.Esperienza_Db" StoreEntitySet="Esperienza_Db">
+            <EndProperty Name="Db">
+              <ScalarProperty Name="id" ColumnName="fk_Db" />
+            </EndProperty>
+            <EndProperty Name="Esperienza">
+              <ScalarProperty Name="id" ColumnName="fk_Esperienza" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Esperienza_Framework" TypeName="GestioneCVModel.Esperienza_Framework" StoreEntitySet="Esperienza_Framework">
+            <EndProperty Name="Esperienza">
+              <ScalarProperty Name="id" ColumnName="fk_Esperienza" />
+            </EndProperty>
+            <EndProperty Name="Framework">
+              <ScalarProperty Name="id" ColumnName="fk_Framework" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Esperienza_Linguaggio" TypeName="GestioneCVModel.Esperienza_Linguaggio" StoreEntitySet="Esperienza_Linguaggio">
+            <EndProperty Name="Esperienza">
+              <ScalarProperty Name="id" ColumnName="fk_Esperienza" />
+            </EndProperty>
+            <EndProperty Name="Linguaggio">
+              <ScalarProperty Name="id" ColumnName="fk_Linguaggio" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Esperienza_Versioning_Configuration" TypeName="GestioneCVModel.Esperienza_Versioning_Configuration" StoreEntitySet="Esperienza_Versioning_Configuration">
+            <EndProperty Name="Esperienza">
+              <ScalarProperty Name="id" ColumnName="fk_esperienza" />
+            </EndProperty>
+            <EndProperty Name="Versioning_Configuration">
+              <ScalarProperty Name="id" ColumnName="fk_Versioning_Configuration" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Nessuna" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model" ZoomLevel="74">
+        <EntityTypeShape EntityType="GestioneCVModel.Ambiente_Ide" Width="1.5" PointX="0.75" PointY="10.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.App_Server" Width="1.5" PointX="0.75" PointY="8.125" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Certificazione" Width="1.5" PointX="3" PointY="6.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Cv" Width="1.5" PointX="3" PointY="9.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Cv_certificazione" Width="1.5" PointX="5.25" PointY="10.625" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Cv_Esperienza" Width="1.5" PointX="5.25" PointY="7.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Db" Width="1.5" PointX="5.25" PointY="16.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Dipendente" Width="1.5" PointX="0.75" PointY="13.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Esperienza" Width="1.5" PointX="7.5" PointY="12.625" Height="3.5186979166666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Esperienza_App_Server" Width="1.5" PointX="9.75" PointY="13.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Framework" Width="1.5" PointX="10.75" PointY="10.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Lingua" Width="1.5" PointX="8.25" PointY="8.125" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Linguaggio" Width="1.5" PointX="12.75" PointY="13.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Ruolo" Width="1.5" PointX="8.75" PointY="1.625" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Tipo_lingua" Width="1.5" PointX="6" PointY="4.375" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.User" Width="1.5" PointX="11" PointY="1.375" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Valutazione" Width="1.5" PointX="6" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestioneCVModel.Versioning_Configuration" Width="1.5" PointX="9.75" PointY="16.125" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="GestioneCVModel.FK_Esperienza_App_Server_App_Server" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.0814925130208337" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="9.0814925130208337" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="9.0814925130208337" />
+          <ConnectorPoint PointX="5" PointY="9.0814925130208337" />
+          <ConnectorPoint PointX="5" PointY="9.922587890625" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="9.922587890625" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="9.922587890625" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="9.922587890625" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="9.922587890625" />
+          <ConnectorPoint PointX="8" PointY="9.922587890625" />
+          <ConnectorPoint PointX="8" PointY="11.316793619791667" />
+          <ConnectorPoint PointX="10.249999500000001" PointY="11.316793619791667" />
+          <ConnectorPoint PointX="10.249999500000001" PointY="13.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Cv_certificazione_Certificazione" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.4129850260416674" />
+          <ConnectorPoint PointX="4.875" PointY="8.7879850260416674" />
+          <ConnectorPoint PointX="4.875" PointY="11.615143229166666" />
+          <ConnectorPoint PointX="5.25" PointY="11.615143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Cv_certificazione_Cv_certificazione" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.057571614583333" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="11.057571614583333" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="11.057571614583333" />
+          <ConnectorPoint PointX="5.25" PointY="11.057571614583333" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Cv_Dipendente" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.807444661458334" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="14.807444661458334" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="14.807444661458334" />
+          <ConnectorPoint PointX="3.75" PointY="14.807444661458334" />
+          <ConnectorPoint PointX="3.75" PointY="13.268697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Cv_Esperienza_Cv" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.81346053846154" />
+          <ConnectorPoint PointX="4.6875" PointY="9.62596053846154" />
+          <ConnectorPoint PointX="4.6875" PointY="10.236240736778846" />
+          <ConnectorPoint PointX="4.8160744349011209" PointY="10.107666301877725" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="9.9898151716799681" />
+          <ConnectorPoint PointX="5.2511528461538459" PointY="9.672587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Lingua_Cv" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="10.3050439453125" />
+          <ConnectorPoint PointX="8.25" PointY="10.3050439453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Cv_Esperienza_Cv_Esperienza" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.75" PointY="12.625" />
+          <ConnectorPoint PointX="7.75" PointY="7.78125" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="7.7812499999999991" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="7.78125" />
+          <ConnectorPoint PointX="6.75" PointY="7.78125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Esperienza_App_Server_Esperienza" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="14.393992513020834" />
+          <ConnectorPoint PointX="9.75" PointY="14.393992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Lingua_lettura" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="1.15625" />
+          <ConnectorPoint PointX="8.46875" PointY="1.15625" />
+          <ConnectorPoint PointX="8.46875" PointY="8.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Lingua_parlato" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="1.3906275000000008" />
+          <ConnectorPoint PointX="8.3281225" PointY="1.3906275000000008" />
+          <ConnectorPoint PointX="8.3281225" PointY="8.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Lingua_scrittura" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="0.92187249999999921" />
+          <ConnectorPoint PointX="8.6093775" PointY="0.92187249999999921" />
+          <ConnectorPoint PointX="8.6093775" PointY="8.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_Lingua_Tipo_lingua" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.15625" PointY="5.9706835937500031" />
+          <ConnectorPoint PointX="7.15625" PointY="10.08256341796875" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="10.08256341796875" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="10.08256341796875" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="10.08256341796875" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="10.08256341796875" />
+          <ConnectorPoint PointX="8.25" PointY="10.08256341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.FK_User_Ruolo" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.25" PointY="2.4228417968750016" />
+          <ConnectorPoint PointX="11" PointY="2.4228417968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_Ambiente_Ide" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.518992513020834" />
+          <ConnectorPoint PointX="3" PointY="11.518992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_App_Server" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.2499999999999978" PointY="9.9129850260416656" />
+          <ConnectorPoint PointX="2.625" PointY="10.287985026041667" />
+          <ConnectorPoint PointX="2.625" PointY="9.3738471538461532" />
+          <ConnectorPoint PointX="3.0011528461538459" PointY="9.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_Db" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="13.268697916666667" />
+          <ConnectorPoint PointX="4.1562525" PointY="17.268992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="17.268992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_Framework" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.441920072916666" />
+          <ConnectorPoint PointX="5" PointY="12.441920072916666" />
+          <ConnectorPoint PointX="5" PointY="12.855286458333332" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="12.855286458333332" />
+          <ConnectorPoint PointX="7.083333333333333" PointY="12.855286458333332" />
+          <ConnectorPoint PointX="7.25" PointY="12.855286458333332" />
+          <ConnectorPoint PointX="7.25" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="8.0104166666666661" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="8.1770833333333339" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="10.166666166666667" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="10.333332833333335" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="11.5" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="11.5" PointY="11.912985026041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_Linguaggio" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.343748" PointY="13.268697916666667" />
+          <ConnectorPoint PointX="3.343748" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="7" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="7" PointY="12.375" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="12.375" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="12.375" />
+          <ConnectorPoint PointX="7.666666666666667" PointY="12.375" />
+          <ConnectorPoint PointX="7.833333333333333" PointY="12.375" />
+          <ConnectorPoint PointX="8.0104166666666661" PointY="12.375" />
+          <ConnectorPoint PointX="8.1770833333333339" PointY="12.375" />
+          <ConnectorPoint PointX="10.166666166666667" PointY="12.375" />
+          <ConnectorPoint PointX="10.333332833333335" PointY="12.375" />
+          <ConnectorPoint PointX="12.375" PointY="12.375" />
+          <ConnectorPoint PointX="12.375" PointY="14.018992513020834" />
+          <ConnectorPoint PointX="12.75" PointY="14.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Cv_Versioning_Configuration" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.3593787499999994" PointY="13.268697916666667" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="16.259348958333334" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="16.259348958333334" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="16.259348958333334" />
+          <ConnectorPoint PointX="8.5729191666666669" PointY="16.259348958333334" />
+          <ConnectorPoint PointX="8.7395858333333347" PointY="16.259348958333334" />
+          <ConnectorPoint PointX="9.75" PointY="16.259348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Esperienza_Ambiente_Ide" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="12.412985026041667" />
+          <ConnectorPoint PointX="1.5" PointY="13.375" />
+          <ConnectorPoint PointX="2.5" PointY="13.375" />
+          <ConnectorPoint PointX="2.5" PointY="15.4755707890625" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="15.4755707890625" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="15.4755707890625" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="15.4755707890625" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="15.4755707890625" />
+          <ConnectorPoint PointX="7.5" PointY="15.4755707890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Esperienza_Db" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="17.268992513020834" />
+          <ConnectorPoint PointX="8.25" PointY="17.268992513020834" />
+          <ConnectorPoint PointX="8.25" PointY="16.143697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Esperienza_Framework" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.09375" PointY="12.625" />
+          <ConnectorPoint PointX="8.09375" PointY="11.614889322916667" />
+          <ConnectorPoint PointX="10.166666166666667" PointY="11.614889322916667" />
+          <ConnectorPoint PointX="10.333332833333335" PointY="11.614889322916667" />
+          <ConnectorPoint PointX="10.75" PointY="11.614889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Esperienza_Linguaggio" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="13.28125" />
+          <ConnectorPoint PointX="10.166666166666667" PointY="13.28125" />
+          <ConnectorPoint PointX="10.333332833333335" PointY="13.28125" />
+          <ConnectorPoint PointX="12.291666666666666" PointY="13.28125" />
+          <ConnectorPoint PointX="12.458333333333334" PointY="13.28125" />
+          <ConnectorPoint PointX="12.75" PointY="13.28125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GestioneCVModel.Esperienza_Versioning_Configuration" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.6562525" PointY="16.143697916666667" />
+          <ConnectorPoint PointX="8.6562525" PointY="16.795423235677085" />
+          <ConnectorPoint PointX="9.75" PointY="16.795423235677085" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
