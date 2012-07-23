@@ -1,0 +1,18 @@
+﻿@model CurriculumWEB.Models.AccountSessionModel.Resetpassword
+           
+<div id="div-set-password">
+    @Html.BeginForm()
+    
+        <fieldset>
+        Cambia la tua password.
+            @Html.Label("Inserisci la vecchia password")
+            @Html.TextBoxFor(m => m.OldPassword)
+            <br />
+            @Html.Label("Inserisci la nuova password")
+            @Html.TextBoxFor(m => m.NewPassword)
+            <br />
+            @Html.Label("Conferma la nuova password")
+            @Html.TextBoxFor(m => m.ComparePassword)
+            <br />
+        </fieldset>
+</div>

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "AlredyAuthenticated";
+}
+
+<h2>Alredy Authenticated</h2>
+<div style="position:fixed; display:block; background-color:Aqua; height: 80px; width:150px;">
+<fieldset>
+    <h3>Spiacente sei già loggato con questo username: @User.Identity.Name
+    Per loggarti nuovamente devi prima eseguire il @Html.ActionLink("LogOff", "LogOff", "Account");
+    </h3>
+</fieldset>
+
+</div>

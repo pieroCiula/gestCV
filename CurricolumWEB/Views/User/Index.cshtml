@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="../../MyScript/Autocomplete.js" type="text/javascript"></script>
+<script src="../../MyScript/User/RuoloClassDropDown.js" type="text/javascript"></script>
+<h2>Index</h2>
+
+<form class="autocomplete_form" method="get" action="@Url.Action("SearchUser", "User")">
+
+    <fieldset>
+    <legend>Ricerca Utente</legend>
+    <label>Username</label>
+    <input type="text" id="username" name="username" class="autocomplete_text" data-autocomplete-source="@Url.Action("QuickUsernameSearch", "User")" />
+    <label>Email</label>
+    <input type="text" name = "email" class="autocomplete_text" data-autocomplete-source="@Url.Action("QuickEmailSearch", "User")"/>
+    <label>Ruolo</label>
+    <select class="dropdown_ruolo" name = "dropdown_ruolo">
+        <option value = "0">-- seleziona --</option>
+    </select>
+    
+    <input type="submit" value="Ricerca" class="search_submit"/>
+    </fieldset>
+
+</form>
+
+@Ajax.ActionLink("Mostra tutti gli User", "ShowAllUser", new AjaxOptions
+{
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "loader",
+    UpdateTargetId = "Div_view_result"
+})
+
+ ||   
+ @Html.ActionLink("Crea nuovo user", "AddUser")
+
+ <p style="color:Green">@TempData["UserSuccess"] </p>
+ <p style="color:Red">@TempData["UserFailed"] </p>
+<div id="Div_view_result" class="resultSearch">
+    <img alt="loader" id="loader"src="../../../Content/loader/ajax-loader.gif" style="display: none" />
+</div>
+
+<div class="DeleteDiv"></div>

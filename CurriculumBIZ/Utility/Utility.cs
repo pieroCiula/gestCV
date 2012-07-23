@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CurriculumBIZ.Utility
 {
-    class Utility
+    public class Utility
     {
         //metodo che prende un ctx.Savechange e restituisce vero se una query ha interessato una o più righe del Db
         public static bool HasSaved(int x)

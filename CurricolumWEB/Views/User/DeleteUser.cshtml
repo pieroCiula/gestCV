@@ -1,0 +1,24 @@
+﻿@model CurricolumDAL.User
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>User</legend>
+    
+    <div class="display-hidden-id-field">
+        @Html.HiddenFor(model => model.id, new { id = "id-hidden-field"});
+    </div>
+
+    <div class="display-label">USERNAME</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">EMAIL</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">RUOLO</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ruolo.tipo_ruolo)
+    </div>
+</fieldset>

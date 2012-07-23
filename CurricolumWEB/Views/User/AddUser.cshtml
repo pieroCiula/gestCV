@@ -1,0 +1,84 @@
+﻿@model CurriculumWEB.Models.AccountSessionModel.UserModel
+
+@{
+    ViewBag.Title = "Add";
+}
+@*<script src="../../MyScript/User/RuoloClassDropDown.js" type="text/javascript"></script>*@
+<script src="../../MyScript/User/EditPageScript.js" type="text/javascript"></script>
+<script src="../../MyScript/User/CheckIfEmailAlredyExistScript.js" type="text/javascript"></script>
+
+ <p style="color:Green">@TempData["UserSuccess"] </p>
+ <p style="color:Red">@TempData["UserFailed"]</p>
+
+<h2>Add</h2>
+
+@using (Html.BeginForm("AddUser", "User", FormMethod.Post, new { @class="UserForm" }))
+{
+    @Html.ValidationSummary(false)
+    <fieldset>
+        <legend>Aggiungi Utente</legend>
+
+
+        <div class="user-id-hidden-field">
+        @Html.HiddenFor(model => model.id, new { @class="user-id-hidden"})
+        </div>
+
+
+         <div class="editor-label">
+                @Html.LabelFor(model => model.username)
+            </div>
+            <div style=" height:40px; display:inline" >
+               <div class="editor-field-username" data-url="@Url.Action("CheckIfNameAlreadyExist", "User")">
+                    @Html.EditorFor(model => model.username)
+                    @Html.ValidationMessageFor(model => model.username)
+                </div>
+                <span class="failed-dettails-username-field" style="display:none"></span>
+                <div class="icon-container-username-field" style="top:auto; left:auto; width:auto; height:auto">
+
+                    <img alt=":-(" style="display:none; float:left" src="../../Content/img/failed-icon2.jpg" class="failed-icon-class"/>
+                    <img alt=":-)" style="display:none; float:left" src="../../Content/img/success4-icon.jpg" class="success-icon-class"/>
+                </div>
+            </div>
+
+        <div class="editor-label">
+                @Html.LabelFor(model => model.email)
+        </div>
+
+        <div style=" height:40px; display:inline" >
+            <div class="editor-field-email" data-url="@Url.Action("CheckIfEmailAlreadyExist", "User")">
+                @Html.EditorFor(model => model.email)
+                @Html.ValidationMessageFor(model => model.email)
+            </div>
+            <span class="failed-dettails-email-field" style="display:none"></span>
+            <div class="icon-container-email-field" style="top:auto; left:auto; width:auto; height:auto">
+
+                <img alt=":-(" style="display:none; float:left" src="../../Content/img/failed-icon2.jpg" class="failed-icon-class"/>
+                <img alt=":-)" style="display:none; float:left" src="../../Content/img/success4-icon.jpg" class="success-icon-class"/>
+            </div>
+        </div>
+
+        <div class="editor-label">
+                @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field">
+                @Html.EditorFor(model => model.password)
+                @Html.ValidationMessageFor(model => model.password)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("RUOLO:")
+        </div>
+        
+            @Html.DropDownListFor(x => x.fk_ruolo,Model.listaRuoli,"--Seleziona un ruolo--", new{@class = "dropdown_ruolo"})
+        
+
+        <p>
+            <input type="submit" value="Create" class="submit-user-button" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

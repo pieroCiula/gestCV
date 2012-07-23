@@ -1,0 +1,30 @@
+﻿@model CurriculumWEB.Models.AccountSessionModel.LogOnModel
+
+@{
+    ViewBag.Title = "LogOn";
+}
+
+<h2>LogOn</h2>
+<fieldset>
+<p>
+Accedi al sito! Per poter usufruire del servizio devi essere Registrato!
+@Html.ActionLink("Se vuoi Registrarti clicca qui!","Registration")
+</p>
+@using (Html.BeginForm())
+{ 
+    <div class="log-on-username-label">
+        @Html.LabelFor(m => m.username)
+    </div>
+    <div class="log-on-username-field">
+        @Html.TextBoxFor(m => m.username,new{ @class ="username-field-text"})
+    </div>
+    <div class="log-on-password-label">
+        @Html.LabelFor(m => m.password)
+    </div>
+    <div class="log-on-password-field">
+        @Html.TextBoxFor(m => m.password, new { @class = "password-field-text" })
+    </div>
+    <hr />
+    <input type="submit" class="log-on-submit"/>
+}
+</fieldset>

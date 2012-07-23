@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<fieldset>
+    @TempData["SettingSuccess"]
+    <legend>Impostazioni Account</legend>
+    
+    @Ajax.ActionLink("Reimposta Password", "SetPsw", null, new AjaxOptions { UpdateTargetId = "div-set-psw",InsertionMode = InsertionMode.Replace, HttpMethod="GET"}, new { @class = "linkButton" })
+    <div class="div-set-psw"></div>
+
+    @Ajax.ActionLink("Reimposta la tua email", "SetEmail", null, new AjaxOptions{ }, new { @class = "linkButton" })
+
+</fieldset>
